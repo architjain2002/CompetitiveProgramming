@@ -2,9 +2,10 @@
 #include <vector>
 using namespace std;
 
-vector<int> bubbleSort(vector<int> vec);
+void bubbleSort(vector<int> vec);
+void print(vector<int> vec);
 
-vector<int> bubbleSort(vector<int> vec)
+void bubbleSort(vector<int> vec)
 {
     bool flag;
     for (int i = 0; i < vec.size(); i++)
@@ -24,11 +25,24 @@ vector<int> bubbleSort(vector<int> vec)
             break;
         }
     }
-    return vec;
+    print(vec);
+    // return vec;
 }
-
+void print(vector<int> vec)
+{
+    for (int i = 0; i < vec.size(); i++)
+    {
+        cout << vec[i] << " ";
+    }
+}
 int main(int argc, char const *argv[])
 {
+    vector<int> vec = {4,
+                       2,
+                       3,
+                       7,
+                       23};
 
+    bubbleSort(vec);
     return 0;
 }
